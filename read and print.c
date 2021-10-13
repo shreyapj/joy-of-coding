@@ -1,27 +1,33 @@
 #include <stdio.h>
 int main()
 {
-   int a[6],i;
-   float b[6];
-   char c[6]={'M','T','W','T','F','S'};
-   
-   printf("Enter the wages of Mr.Int\n");
-   for(i=0; i<6; i++)
-   {
-      scanf("%d",&a[i]); 
-   }
- 
- printf("Enter the wages of Mr.Float\n");
-   for(i=0; i<6; i++)
-   {
-      scanf("%f",&b[i]); 
-   }
+    char ch, s1[100],c,chara,s2[100]="RNS";
+    printf("Different ways of reading character\n");
+    printf("Enter any character:It will read using scanf\n");
+    scanf("%c",&ch);
+    printf("Enter any character: It will read using getch\n");
+    c=getch();
+    printf("Enter the character: It will read using getche\n");
+    chara=getche();
+    printf("\nDifferent ways of printing character\n");
+    printf("Printing character using printf statement\n");
+    printf("%c,%c,%c",ch,c,chara);
+    printf("\nPrinting character using putchar\n");
+    putchar(ch );
+    putchar(c );
+    putchar(chara );
+    printf("\nDifferent ways of reading string\n");
+    printf("Enter any string: It will read using scanf\n");
+    scanf("%s",s1);
+    printf("\nDifferent ways of printing string\n");
+    printf("Printing string using printf statement\n");
+    printf("%s %s",s1,s2);
+    printf("\nPrinting string using puts\n");
+    puts(s1);
+    puts(s2);
+    return 0;
 
 
     
-for(i=0; i<6; i++)
-   {
-       printf("The wages of Mr.Int and Mr.Float on %c is ₹ %d and ₹ %.2f\n",c[i],a[i],b[i]); 
-   }
-    return 0;
+
 }
